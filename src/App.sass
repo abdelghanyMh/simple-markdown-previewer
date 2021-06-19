@@ -1,0 +1,46 @@
+$ff-Lato: "Lato,Helvetica Neue,Helvetica,sans-serif"
+
+#wrapper
+  font-family: $ff-Lato
+  min-height: 100%
+  background: LightGray
+  display: grid
+  grid-template-columns: 50% 50%
+  grid-gap: 10px
+  grid-template-areas: "advert content"
+
+  #editor
+    width: 97%
+    height: 100vh
+    font-size: 1rem
+    font-family: inherit
+    padding: 14px 10px 10px
+    grid-area: advert
+    border: none
+    background-color: white
+    resize: none
+    outline: none
+
+  #preview
+    white-space: normal
+    overflow-y: auto
+    padding: 0 1rem
+    background: transparent
+    grid-area: content
+    height: 100vh
+    width: 100%
+    font-family: inherit
+    overflow-wrap: break-word
+    height: 100vh
+    width: 94%
+    pre
+      white-space: pre-wrap
+@media (max-width: 600px)
+  #wrapper
+    font-size: 1.5rem
+    height: 100vh
+    grid-template-columns: auto
+
+    grid-template-areas: "advert" "content"
+    #editor
+      font-size: 1.5rem
