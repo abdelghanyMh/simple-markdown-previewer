@@ -1,0 +1,20 @@
+// MEDIA QUERY MANAGER
+//  [0 - 375px ]: mobile-sml
+//  [1440px-1226px]: laptop-md
+//  1440px + :    is where our design apply
+//     $breakpoint arguement choices: 
+//         - mobile-sml
+//         1em = 16px
+@mixin respond($breakpoint)
+    @if $breakpoint == mobile
+        @media only screen and ( max-width: 31.25em  )// 500px/16
+            @content
+    @if $breakpoint == tablet
+        @media only screen and ( max-width: 50em  )// 800px/16
+            @content
+    @if $breakpoint == laptop-sml
+        @media only screen and ( max-width: 62.5em  )// 1266px/16
+            @content
+    @if $breakpoint == laptop-md
+        @media only screen and ( max-width: 76.625em  )// 1266px/16
+            @content

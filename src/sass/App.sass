@@ -1,0 +1,70 @@
+@import './_mixins'
+@import './_base'
+
+#wrapper
+  min-height: 100%
+  background: LightGray
+  display: grid
+  grid-template-columns: 50% 50%
+  grid-gap: 10px
+  grid-template-areas: "advert content"
+
+  background: var(--clr-grey-10)
+  padding: 5rem
+  @include respond($breakpoint:laptop-sml )
+    grid-template-columns: auto
+    grid-template-areas: "advert" "content"
+    grid-gap: 5rem
+  @include respond($breakpoint:tablet )
+    padding: 5rem 3rem
+
+  @include respond($breakpoint:mobile )
+    padding: 5rem 1rem
+
+.editor-container
+  width: 100%
+
+  #editor
+    font-size: 1rem
+    font-family: inherit
+    grid-area: advert
+    border: none
+    background-color: white
+    resize: none
+    outline: none
+
+    width: 95%
+    height: calc(100vh - 10rem)
+    border-radius: 8px
+    padding: 2rem
+    @include respond($breakpoint:laptop-sml )
+      height: calc(50vh - 10rem)
+      resize: both
+      padding-right: 1.2rem
+    @include respond($breakpoint:mobile )
+      padding: 1rem 0 0 1rem
+
+#preview
+  grid-area: content
+
+  white-space: normal
+  background: transparent
+  font-family: inherit
+
+  overflow-wrap: break-word
+  overflow-y: auto
+
+  height: calc(100vh - 10rem)
+  width: 94%
+
+  padding: 1rem 1rem 1rem 4rem
+  @include respond($breakpoint:laptop-sml )
+    padding: 2rem
+  @include respond($breakpoint:mobile )
+    padding: 0rem
+    padding-left: 1.2rem
+
+// support row-gap for older browsers
+@supports not (grid-gap: 10px)
+  .editor-container
+    margin-bottom: 5rem
