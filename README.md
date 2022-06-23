@@ -4,6 +4,12 @@
 👋</h1>
 
 As part of the Free Code Camp projects, I developed a simple markdown syntax previewer.
+
+Built in  [reactjs](https://reactjs.org/), I'm also using:
+
+1. [sass](https://sass-lang.com/) for styling
+
+
 ### 🏠 [Homepage](https://abdelghanymh.github.io/simple-markdown-previewer/)
 
 
